@@ -36,9 +36,9 @@ class InvoiceController extends ApiController
             return $this->respondValidationError('Please provide a title!');
         }
         // persist the new invoice
-        $movie = new Invoice;
-        $movie->setTitle($request->get('title'));
-        $movie->setCount(0);
+        $invoice = new Invoice;
+        $invoice->setTitle($request->get('title'));
+        $invoice->setCount(0);
         $em->persist($invoice);
         $em->flush();
         return $this->respondCreated($invoiceRepository->transform($invoice));
