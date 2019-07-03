@@ -162,8 +162,8 @@ class ApiController
             $jwtVerifier = (new \Okta\JwtVerifier\JwtVerifierBuilder())
                             ->setAdaptor(new \Okta\JwtVerifier\Adaptors\SpomkyLabsJose())
                             ->setAudience('api://default')
-                            ->setClientId('0oaf2w64cvmQbcoUH0h7')
-                            ->setIssuer('https://dev-354685.oktapreview.com/oauth2/default')
+                            ->setClientId('0oau6gxfnwL8NAzDH356')
+                            ->setIssuer('https://www.everpayinc.com/oauth2/default')
                             ->build();
 
             // Verify the JWT from the Authorization Header.
