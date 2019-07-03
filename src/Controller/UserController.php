@@ -51,7 +51,7 @@ class UserController extends ApiController
         if (! $this->isAuthorized()) {
             return $this->respondUnauthorized();
         }
-        $movie = $userRepository->find($username);
+        $movie = $userRepository->find($id);
         if (! $user) {
             return $this->respondNotFound();
         }
