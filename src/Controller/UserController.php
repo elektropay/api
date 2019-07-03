@@ -37,7 +37,7 @@ class UserController extends ApiController
         }
         // persist the new user
         $user = new User;
-        $user->setId($request->get('username'));
+        $user->setUsername($request->get('username'));
         $user->setCount(0);
         $em->persist($user);
         $em->flush();
